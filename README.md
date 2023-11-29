@@ -57,7 +57,7 @@ Evaluate the results by the official evaluation MATLAB code **./DIM_evaluation_c
 
 For obtain the trainset of Composition-1k dataset, please refer to: [Matteformer](https://github.com/webtoon/matteformer)
 
-Please modify the trainingset path at
+Please modify the trainingset path at https://github.com/cnnlstm/diffusionmat/blob/df4974ba66b3f2f9c9788ce38bb87e6b2b583d33/runners/diffusionmat.py#L168
 
 
 ### Start Training
