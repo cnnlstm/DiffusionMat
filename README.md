@@ -1,8 +1,6 @@
 # **DiffusionMat: Alpha Matting as Sequential Refinement Learning**
 
-[paper](https://arxiv.org/pdf/2311.13535.pdf) |  [project website](https://cnnlstm.github.io/DiffusionMat/)
-
-[video results](https://youtu.be/b_qQvv0R3BA) |
+[paper](https://arxiv.org/pdf/2311.13535.pdf) |  [project website](https://cnnlstm.github.io/DiffusionMat/) |  [video results](https://youtu.be/b_qQvv0R3BA) 
 
 ## Abstract
 
