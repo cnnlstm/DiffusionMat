@@ -1,0 +1,50 @@
+data:
+    dataset: "PortMatting"
+    category: "PortMatting"
+    image_size: 256
+    channels: 1
+    logit_transform: false
+    uniform_dequantization: false
+    gaussian_dequantization: false
+    random_flip: true
+    rescaled: true
+    num_workers: 0
+
+model:
+    type: "simple"
+    in_channels: 4
+    out_ch: 1
+    ch: 64
+    # num_res_blocks: 1
+    # ch_mult: [1, 2, 4]
+    num_res_blocks: 2
+    ch_mult: [1, 1, 2, 2, 4, 4]
+    # attn_resolutions: [16, ]
+    dropout: 0.0
+    var_type: fixedsmall
+    ema_rate: 0.999
+    ema: True
+    resamp_with_conv: True
+
+
+
+diffusion:
+    beta_schedule: linear
+    beta_start: 0.0001
+    beta_end: 0.02
+    # num_diffusion_timesteps: 50
+    num_diffusion_timesteps: 500
+
+training:
+    batch_size: 8
+    last_only: True
+
+optim:
+    weight_decay: 0.000
+    optimizer: "Adam"
+    # lr: 0.00001
+    lr: 0.0001
+    beta1: 0.5 
+    # beta1: 0.9
+    amsgrad: false
+    eps: 0.00000001
