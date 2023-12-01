@@ -29,15 +29,21 @@ conda env create -f diffusionmat.yaml
 
 ### Pretrained Models
 
-Please download our pre-trained model, unzip it and put in  `./pretrained_models`.
+Please download our pre-trained models and put in  `./pretrained_models`.
 
 | Model | Description
 | :--- | :----------
-|[Composition-1k](https://drive.google.com/file/d/1Nl6lu0YJru3gI-KVSihQ78IzWj9adL_g/view?usp=drive_link)  | Trained on Composition-1k.
+|[P3M](https://drive.google.com/file/d/1is6LEv3DjipCGjYawlbPwDPZJvTYyPdb/view?usp=sharing)  | Trained on P3M.
+|[Composition-1k](https://drive.google.com/file/d/1NAuTEUGWEk3RaXWQiJTJ0m6KwpuIE1_L/view?usp=sharing)  | Trained on Composition-1k.
+|[Diffusion Model](https://drive.google.com/file/d/19maZQOX5hbBM8-Jd2yVGjfcvoxh8w7dB/view?usp=sharing)  | Unconditional Alpha Matte Diffusion .
+|[SwinTransformer](https://drive.google.com/file/d/1n3PhgzdMtCPJJA4mBhRjrjB4_jJbHBrd/view?usp=sharing)  | Pre-trained SwinTransformer.
+
 
 ### Inference
 
-The testset of Composition-1k dataset can be downloaded at: [Composition-1k-Testset](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing)
+The testset of Composition-1k dataset can be downloaded at: [Composition-1k-Testset](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing).
+
+P3M dataset can be downloaded at: [P3M Dataset](https://drive.google.com/uc?export=download&id=1LqUU7BZeiq8I3i5KxApdOJ2haXm-cEv1).
 
 ```
 python inference.py --exp inference_dir  --config matte.yml --delta_config deltablock.yml --sample -i images --t 250 --sample_step 5 --ni
