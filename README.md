@@ -35,7 +35,7 @@ Please download our pre-trained models and put in  `./pretrained_models`.
 | :--- | :----------
 |[P3M](https://drive.google.com/file/d/1is6LEv3DjipCGjYawlbPwDPZJvTYyPdb/view?usp=sharing)  | Trained on P3M.
 |[Composition-1k](https://drive.google.com/file/d/1NAuTEUGWEk3RaXWQiJTJ0m6KwpuIE1_L/view?usp=sharing)  | Trained on Composition-1k.
-|[Diffusion Model](https://drive.google.com/file/d/19maZQOX5hbBM8-Jd2yVGjfcvoxh8w7dB/view?usp=sharing)  | Unconditional Alpha Matte Diffusion .
+|[Diffusion Model](https://drive.google.com/file/d/19maZQOX5hbBM8-Jd2yVGjfcvoxh8w7dB/view?usp=sharing)  | Unconditional Alpha Matte Diffusion.
 |[SwinTransformer](https://drive.google.com/file/d/1n3PhgzdMtCPJJA4mBhRjrjB4_jJbHBrd/view?usp=sharing)  | Pre-trained SwinTransformer.
 
 
