@@ -46,7 +46,6 @@ We provide 4 samples from Composition-1k dataset for the quick inference:
 python inference.py --exp samples/alphas_pred  --config matte.yml --delta_config deltablock.yml --sample -i images --t 250 --sample_step 5 --ni
 ```
 
----
 
 The whole testset of Composition-1k dataset can be downloaded at: [Composition-1k-Testset](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing)
 
