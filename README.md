@@ -1,6 +1,6 @@
 # **DiffusionMat: Alpha Matting as Sequential Refinement Learning**
 
-[paper](https://arxiv.org/pdf/2311.13535.pdf) |  [project website](https://cnnlstm.github.io/DiffusionMat/) |  [video results](https://youtu.be/b_qQvv0R3BA) 
+[paper](https://arxiv.org/pdf/2311.13535.pdf) |  [project website](https://cnnlstm.github.io/DiffusionMat/) |  [video results](https://youtu.be/b_qQvv0R3BA)
 
 ## Abstract
 
@@ -38,20 +38,29 @@ Please download our pre-trained models and put in  `./pretrained_models`.
 |[Diffusion Model](https://drive.google.com/file/d/19maZQOX5hbBM8-Jd2yVGjfcvoxh8w7dB/view?usp=sharing)  | Unconditional Alpha Matte Diffusion.
 |[SwinTransformer](https://drive.google.com/file/d/1n3PhgzdMtCPJJA4mBhRjrjB4_jJbHBrd/view?usp=sharing)  | Pre-trained SwinTransformer.
 
-
 ### Inference
 
-The testset of Composition-1k dataset can be downloaded at: [Composition-1k-Testset](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing).
-
-P3M dataset can be downloaded at: [P3M Dataset](https://drive.google.com/uc?export=download&id=1LqUU7BZeiq8I3i5KxApdOJ2haXm-cEv1).
+We provide 4 samples from Composition-1k dataset for the quick inference:
 
 ```
-python inference.py --exp inference_dir  --config matte.yml --delta_config deltablock.yml --sample -i images --t 250 --sample_step 5 --ni
+python inference.py --exp samples/alphas_pred  --config matte.yml --delta_config deltablock.yml --sample -i images --t 250 --sample_step 5 --ni
 ```
+
+---
+
+The whole testset of Composition-1k dataset can be downloaded at: [Composition-1k-Testset](https://drive.google.com/file/d/1fS-uh2Fi0APygd0NPjqfT7jCwUu_a_Xu/view?usp=sharing)
+
+P3M dataset can be downloaded at: [P3M Dataset](https://drive.google.com/uc?export=download&id=1LqUU7BZeiq8I3i5KxApdOJ2haXm-cEv1)
+
+Rememer to modifying the testset path at [here](https://github.com/cnnlstm/DiffusionMat/blob/main/runners/diffusionmat_test.py#L175)
 
 ### Evaluation
 
-Evaluate the results by the official evaluation MATLAB code **./DIM_evaluation_code/evaluate.m** (provided by [Deep Image Matting](https://sites.google.com/view/deepimagematting))
+Evaluate Composition-1k's results by the official evaluation MATLAB code **./DIM_evaluation_code/evaluate.m** (provided by [Deep Image Matting](https://sites.google.com/view/deepimagematting))
+
+Evaluate P3M results by the official evaluation [Python code](https://github.com/JizhiziLi/P3M/blob/master/core/evaluate.py)
+
+
 
 ## Training
 
@@ -83,4 +92,3 @@ year={2023}
 ## Acknowledgement
 
 Our Codes are mainly originated from  [SDEdit](https://github.com/ermongroup/SDEdit).
-

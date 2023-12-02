@@ -147,12 +147,12 @@ class Diffusion(object):
         num_res_blocks=1, dropout=0.1).to(self.device)
 
         
-        ckpt = torch.load("/data/xyy/project_adobe/pretrained_models/ckpt_diffusion.pt")['net_model']
+        ckpt = torch.load("./pretrained_models/ckpt_diffusion.pt")['net_model']
         matting_model.load_state_dict(ckpt)
         matting_model = torch.nn.DataParallel(matting_model)
         matting_model.to(self.device)
         matting_model.eval()
-        ckpt = torch.load("/data/xyy/project_adobe/pretrained_models/ckpt_adobe.pth")
+        ckpt = torch.load("./pretrained_models/ckpt_adobe.pth")
         
         
         
@@ -172,9 +172,9 @@ class Diffusion(object):
 
 
 
-        image_dir = "./Composition-1k-testset/merged/"
-        trimap_dir = "./Composition-1k-testset/trimaps/"
-        alpha_dir = "./Composition-1k-testset/alpha_copy/"
+        image_dir = "./samples/merged/"
+        trimap_dir = "./samples/trimaps/"
+        alpha_dir = "./samples/alpha_copy/"
 
 
 
@@ -185,8 +185,8 @@ class Diffusion(object):
 
                         image_path = os.path.join(image_dir, image_name)
 
-                        matte_name = image_name.split('_'+image_name.split("_")[-1])[0]+'.png'
-                        print (image_path)
+                        # matte_name = image_name.split('_'+image_name.split("_")[-1])[0]+'.png'
+                        # print (image_path)
                         trimap_path = os.path.join(trimap_dir, image_name)
                         alpha_path = os.path.join(alpha_dir, image_name)
 
